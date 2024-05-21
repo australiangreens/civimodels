@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<extension key="civimodels" type="module">
+  <file>civimodels</file>
+  <name>CiviModels Data Model Base Extension</name>
+  <description>Base extension for displaying various model data in a consistent manner.</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>John Twyman</author>
+    <email>john.twyman@greens.org.au</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/australiangreens/civimodels</url>
+    <url desc="Documentation">https://github.com/australiangreens/civimodels</url>
+    <url desc="Support">https://github.com/australiangreens/civimodels</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2024-05-16</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>5.70</ver>
+  </compatibility>
+  <comments>This is a new, undeveloped module</comments>
+  <classloader>
+    <psr0 prefix="CRM_" path="."/>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/CiviModels</namespace>
+    <format>23.02.1</format>
+    <angularModule>crmCivimodels</angularModule>
+  </civix>
+  <mixins>
+    <mixin>mgd-php@1.0.0</mixin>
+    <mixin>setting-php@1.0.0</mixin>
+    <mixin>smarty-v2@1.0.1</mixin>
+    <mixin>entity-types-php@1.0.0</mixin>
+    <mixin>menu-xml@1.0.0</mixin>
+    <mixin>scan-classes@1.0.0</mixin>
+  </mixins>
+</extension>

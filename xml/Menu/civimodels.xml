@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/contact/view/models</path>
+    <page_callback>CRM_CiviModels_Page_ContactModels</page_callback>
+    <title>ContactModels</title>
+    <access_arguments>access civimodels</access_arguments>
+  </item>
+</menu>
