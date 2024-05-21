@@ -6,13 +6,7 @@ class CRM_CiviModels_Hook {
    * This hook allows individual models to provide data for rendering
    * inside the CiviModels display tab on a contact record
    *
-   * @param array $data with the following keys
-   *
-   * - model_name (which extension is using the hook)
-   * - title (title text for display inside the
-   * - introduction
-   * - template
-   * - model_data
+   * @param array $data with the model output data
    *
    */
   public static function displayCiviModelData($contact_id, &$data) {
