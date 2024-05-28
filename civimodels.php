@@ -11,6 +11,8 @@ use CRM_CiviModels_ExtensionUtil as E;
  */
 function civimodels_civicrm_config(&$config): void {
   _civimodels_civix_civicrm_config($config);
+  // We set a high priority to ensure this hook fires before those in child model extensions
+  Civi::service('dispatcher')->addListener('hook_civicrm_navigationMenu', 'civimodels_symfony_navigationMenu', 500);
 }
 
 /**
@@ -32,14 +34,25 @@ function civimodels_civicrm_enable(): void {
 }
 
 /**
- * Implements hook_civicrm_navigationMenu().
+ * Implements hook_civicrm_navigationMenu() via Symfony
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
  */
-function civimodels_civicrm_navigationMenu(&$menu): void {
-  _civimodels_civix_insert_navigation_menu($menu, 'Administer/System Settings', [
-    'label' => 'CiviModels settings' ,
-    'name' => 'civimodles_settings',
+function civimodels_symfony_navigationMenu($event): void {
+  $hook_values = $event->getHookValues();
+  $menu = &$hook_values[0];
+  _civimodels_civix_insert_navigation_menu($menu, 'Administer', [
+    'label' => 'CiviModels',
+    'name' => 'CiviModels',
+    'url' => '#',
+    'permission' => 'access civimodels',
+    'operator' => 'OR',
+    'separator' => 0,
+  ]);
+
+  _civimodels_civix_insert_navigation_menu($menu, 'Administer/CiviModels', [
+    'label' => 'CiviModels Settings',
+    'name' => 'CiviModel_settings',
     'url' => 'civicrm/admin/setting/civimodels',
     'permission' => 'administer civimodels',
     'operator' => 'OR',

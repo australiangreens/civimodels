@@ -1,4 +1,4 @@
-# civimodels
+# CiviModels
 
 ## Summary
 CiviModels is an extension that provides a common framework for presenting multiple data models regarding CiviCRM contacts. Specifically the extension:
