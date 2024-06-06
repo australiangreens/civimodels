@@ -1,0 +1,13 @@
+{
+  "name": "australian_greens/civimodels",
+  "description": "CiviCRM extension to present various model data inside CiviCRM",
+  "homepage": "https://github.com/australiangreens/civimodels",
+  "license": "AGPL-3.0-or-later",
+  "require": {
+    "composer/installers": "^1.6 || ^2"
+  },
+  "support": "https://github.com/australiangreens/civimodels/issues",
+  "type": "civicrm-ext",
+  "version": "1.0.0"
+  }
+
