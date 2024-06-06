@@ -25,7 +25,7 @@ Many of these questions can be answered through CiviReports, Contact searches an
 of these various "scores" and make them more immediately usable for the creation of Smart Groups, better segmentation of mailing audiences, etc.
 
 The CiviModels extension is designed to provide a single presentation framework for any number of models that you may wish to build and install.
-It provides a single place in which all active models' data can be viewed while preserving the manage user access to individual models.
+It provides a single place in which all active models' data can be viewed while preserving the ability to manage user access to individual models.
 
 ## How it works
 The extension creates a new tab for CiviCRM contact records (using the [hook_civicrm_tabset function](https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_tabset/)).
