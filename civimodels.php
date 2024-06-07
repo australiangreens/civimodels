@@ -50,7 +50,7 @@ function civimodels_symfony_navigationMenu($event): void {
     'separator' => 0,
   ]);
 
-  _civimodels_civix_insert_navigation_menu($menu, 'Administer/CiviModels', [
+/*  _civimodels_civix_insert_navigation_menu($menu, 'Administer/CiviModels', [
     'label' => 'CiviModels Settings',
     'name' => 'CiviModel_settings',
     'url' => 'civicrm/admin/setting/civimodels',
@@ -58,6 +58,7 @@ function civimodels_symfony_navigationMenu($event): void {
     'operator' => 'OR',
     'separator' => 0,
   ]);
+*/
   _civimodels_civix_navigationMenu($menu);
 }
 
