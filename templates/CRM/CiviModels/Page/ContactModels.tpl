@@ -8,17 +8,13 @@
   <tbody>
     {foreach name="model" from=$models item="model"}
       {if $smarty.foreach.model.index % 2 == 0}
-        <!-- {$smarty.foreach.model.index} -->
-        <!-- inside if index % 2 clause -->
         <tr>
       {/if}
         <td width="50%">
           {assign var="template" value=$model.template}
           {include file=$template model=$model}
         </td>
-      {if $smarty.foreach.model.index % 2 == 1 || $smarty.foreach.item.last}
-        <!-- {$smarty.foreach.model.index} -->
-        <!-- inside if index % 2 == 1 clause -->
+      {if $smarty.foreach.model.index % 2 == 1 || $smarty.foreach.model.last}
         </tr>
       {/if}
     {/foreach}
